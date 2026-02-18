@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TaskFlow – Organize your work and achieve more." />
+  <title>TaskFlow – Boost Your Productivity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Lora:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" role="banner">
+    <div class="container nav__inner">
+      <a href="#" class="nav__logo" aria-label="TaskFlow home">
+        <span class="logo-mark" aria-hidden="true">▶</span> TaskFlow
+      </a>
+      <nav aria-label="Primary navigation">
+        <ul class="nav__links" role="list">
+          <li><a href="#features" class="nav__link">Features</a></li>
+          <li><a href="#demo" class="nav__link">Demo</a></li>
+          <li><a href="#pricing" class="nav__link">Pricing</a></li>
+          <li><a href="#testimonials" class="nav__link">Reviews</a></li>
+        </ul>
+      </nav>
+      <div class="nav__actions">
+        <a href="#" class="btn btn--ghost">Sign In</a>
+        <a href="#" class="btn btn--primary">Start Free</a>
+        <button class="nav__burger" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero__bg-grid" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__pill" aria-label="Announcement">🚀 Now with AI-powered task suggestions</div>
+        <h1 id="hero-heading" class="hero__title">
+          Boost Your<br />
+          <span class="gradient-text">Productivity</span>
+        </h1>
+        <p class="hero__sub">Organize your work, collaborate with your team, and achieve more — all in one beautifully simple platform.</p>
+        <div class="hero__ctas">
+          <a href="#" class="btn btn--primary btn--lg">
+            <span>▶</span> Get Started Free
+          </a>
+          <a href="#demo" class="btn btn--outline btn--lg">
+            <span>◎</span> Watch Demo
+          </a>
+        </div>
+        <div class="hero__social-proof">
+          <div class="avatars" aria-hidden="true">
+            <span>👤</span><span>👤</span><span>👤</span><span>👤</span>
+          </div>
+          <span>Trusted by <strong>50,000+</strong> teams worldwide</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section" id="features" aria-labelledby="features-heading">
+      <div class="container">
+        <div class="section__label">Why TaskFlow</div>
+        <h2 id="features-heading" class="section__title">Everything your team needs</h2>
+        <p class="section__sub">From solo freelancers to enterprise teams — TaskFlow scales with you.</p>
+        <div class="features-grid" id="features-grid" role="list">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- DEMO / SCREENSHOT -->
+    <section class="demo-section" id="demo" aria-labelledby="demo-heading">
+      <div class="container">
+        <h2 id="demo-heading" class="section__title">See TaskFlow in Action</h2>
+        <p class="section__sub">A powerful dashboard that stays out of your way.</p>
+        <div class="demo-window" aria-label="TaskFlow app screenshot">
+          <div class="demo-window__bar" aria-hidden="true">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="window-title">TaskFlow – My Workspace</span>
+          </div>
+          <div class="demo-window__body">
+            <div class="demo-sidebar">
+              <div class="demo-nav-item active">📋 All Tasks</div>
+              <div class="demo-nav-item">📅 Calendar</div>
+              <div class="demo-nav-item">👥 Team</div>
+              <div class="demo-nav-item">📊 Analytics</div>
+            </div>
+            <div class="demo-main">
+              <div class="demo-header">
+                <strong>Sprint 12 – Week 3</strong>
+                <span class="demo-badge">In Progress</span>
+              </div>
+              <div class="demo-tasks">
+                <div class="demo-task done">✅ Design system update</div>
+                <div class="demo-task done">✅ API integration</div>
+                <div class="demo-task active">🔄 User onboarding flow</div>
+                <div class="demo-task">⬜ Performance audit</div>
+                <div class="demo-task">⬜ Mobile testing</div>
+              </div>
+              <div class="demo-progress">
+                <span>Progress: 2/5 tasks</span>
+                <div class="progress-bar"><div class="progress-fill" style="width:40%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section" id="pricing" aria-labelledby="pricing-heading">
+      <div class="container">
+        <div class="section__label">Pricing</div>
+        <h2 id="pricing-heading" class="section__title">Simple, transparent pricing</h2>
+        <div class="pricing-grid" id="pricing-grid" role="list">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials-section" id="testimonials" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <h2 id="testimonials-heading" class="section__title" style="color:#fff;">What Our Users Say</h2>
+        <div class="testimonials-grid" id="testimonials-grid" role="list">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="cta-banner" aria-labelledby="cta-heading">
+      <div class="container cta-banner__inner">
+        <h2 id="cta-heading">Ready to get more done?</h2>
+        <p>Start for free. No credit card required. Cancel anytime.</p>
+        <a href="#" class="btn btn--primary btn--lg">Start Free Trial</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="logo-mark" aria-hidden="true">▶</span>
+        <strong>TaskFlow</strong>
+        <p>Work smarter, not harder.</p>
+      </div>
+      <nav aria-label="Product navigation">
+        <h3 class="footer__heading">Product</h3>
+        <ul role="list">
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Integrations</a></li>
+          <li><a href="#">Changelog</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Resources navigation">
+        <h3 class="footer__heading">Resources</h3>
+        <ul role="list">
+          <li><a href="#">Docs</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Company navigation">
+        <h3 class="footer__heading">Company</h3>
+        <ul role="list">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2025 TaskFlow Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="data/app.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
