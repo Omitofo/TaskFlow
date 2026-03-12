@@ -65,23 +65,44 @@
     document.querySelectorAll('section[id]').forEach(s => observer.observe(s));
   }
 
-  /* ── Mobile Menu ── */
+  /* ── Mobile Menu (Drawer) ── */
   function initMobileMenu() {
     const burger = document.querySelector('.nav__burger');
-    const navLinks = document.querySelector('.nav__links');
-    if (!burger || !navLinks) return;
+    const drawer = document.getElementById('mobile-menu');
+    if (!burger || !drawer) return;
+
+    function closeMenu() {
+      burger.classList.remove('is-open');
+      drawer.classList.remove('is-open');
+      burger.setAttribute('aria-expanded', 'false');
+      drawer.setAttribute('aria-hidden', 'true');
+    }
+
     burger.addEventListener('click', () => {
-      const open = navLinks.style.display === 'flex';
-      navLinks.style.display = open ? '' : 'flex';
-      navLinks.style.flexDirection = open ? '' : 'column';
-      navLinks.style.position = open ? '' : 'absolute';
-      navLinks.style.top = open ? '' : '100%';
-      navLinks.style.left = open ? '' : '0';
-      navLinks.style.right = open ? '' : '0';
-      navLinks.style.background = open ? '' : 'var(--c-bg)';
-      navLinks.style.padding = open ? '' : '1rem';
-      navLinks.style.borderBottom = open ? '' : '1px solid var(--c-border)';
-      burger.setAttribute('aria-expanded', String(!open));
+      const isOpen = drawer.classList.contains('is-open');
+      if (isOpen) {
+        closeMenu();
+      } else {
+        burger.classList.add('is-open');
+        drawer.classList.add('is-open');
+        burger.setAttribute('aria-expanded', 'true');
+        drawer.setAttribute('aria-hidden', 'false');
+      }
+    });
+
+    // Close on drawer link click
+    drawer.querySelectorAll('.nav__drawer-link').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.nav')) closeMenu();
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMenu();
     });
   }
 
@@ -105,7 +126,7 @@
   function initScrollReveal() {
     const items = document.querySelectorAll('.feature-card, .testimonial-card, .pricing-card');
     const observer = new IntersectionObserver(entries => {
-      entries.forEach((entry, i) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           setTimeout(() => {
             entry.target.style.opacity = '1';

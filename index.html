@@ -27,9 +27,26 @@
         </ul>
       </nav>
       <div class="nav__actions">
+        <a href="#" class="btn btn--ghost nav__signin">Sign In</a>
+        <a href="#" class="btn btn--primary nav__startfree">Start Free</a>
+        <button class="nav__burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Drawer -->
+    <div class="nav__drawer" id="mobile-menu" aria-hidden="true">
+      <ul class="nav__drawer-links" role="list">
+        <li><a href="#features" class="nav__drawer-link">Features</a></li>
+        <li><a href="#demo" class="nav__drawer-link">Demo</a></li>
+        <li><a href="#pricing" class="nav__drawer-link">Pricing</a></li>
+        <li><a href="#testimonials" class="nav__drawer-link">Reviews</a></li>
+      </ul>
+      <div class="nav__drawer-actions">
         <a href="#" class="btn btn--ghost">Sign In</a>
-        <a href="#" class="btn btn--primary">Start Free</a>
-        <button class="nav__burger" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+        <a href="#" class="btn btn--primary" style="flex:1;justify-content:center;">Start Free</a>
       </div>
     </div>
   </header>
